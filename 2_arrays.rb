@@ -4,12 +4,14 @@ require 'rspec'
 ### LOGIC (fix me)
 
 # Returns the average of all the numbers in the array
-def average(numbers)
-  sum = 0
-  numbers.each do |n|
-    sum += n
-  end
-  sum / numbers.size
+def average(numbers = nil)
+    if numbers != nil && numbers != []
+      sum = 0
+      numbers.each do |n|
+        sum += n.to_f
+      end
+      sum / numbers.size
+    end
 end
 
 ### TEST CODE (don't touch me)
